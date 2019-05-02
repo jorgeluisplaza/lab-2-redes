@@ -131,7 +131,7 @@ def generateSpectogram(figName, figtitle, xlabel, ylabel, data, fs):
 audioTime = np.linspace(0, len(data)/fs, num=len(data))
 
 # Se obtienen las frecuencias
-freqs = frequency(len(data), 1/fs)
+freqs = frequency(len(data), 1.0/fs)
 
 originalAudio(data, audioTime, freqs)
 FIRFilterLowPass(data, fs, audioTime, freqs)
